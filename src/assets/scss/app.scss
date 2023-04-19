@@ -1,0 +1,41 @@
+@use '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@use '../partials/_variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(65, 63, 63);
+}
+
+.container {
+    width: 90%;
+}
+
+.container_small {
+    width: 80%;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    height: 100px;
+    color: white;
+}
+
+main{
+    height: 600px;
+    width: 100%;
+    background-color: aqua;
+}
+
+footer {
+    background-color: rgb(14, 14, 14);
+    height: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
