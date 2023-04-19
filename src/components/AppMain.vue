@@ -17,8 +17,10 @@ export default {
 
 <template>
     <main>
-        <div class="container_small pt-2">
-            <MovieList></MovieList>
+        <div class="container pt-2">
+            <div class="row">
+                <MovieList></MovieList>
+            </div>
         </div>
     </main>
 </template>

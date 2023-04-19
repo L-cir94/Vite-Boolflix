@@ -26,8 +26,5 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/partials/variables' as*;
-
-h1 {
-    color: red;
-}
+h1{color: red;}
 </style>
