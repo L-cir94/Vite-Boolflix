@@ -17,30 +17,8 @@ export const state = reactive({
             .catch(error => {
                 console.error(error)
             })
-    }/* ,
-    setURL() {
-        if (this.query) {
-            return `${this.movie_base_URL}&query=${this.query}`;
-        }
-    },
+    }
 
-    filteredSearch() {
-        this.fetchMovies(this.setURL())
-    }, */
 })
 
-/* let config = {
-    method: 'get',
-    maxBodyLength: Infinity,
-    url: 'https://api.themoviedb.org/3/search/movie?api_key=edd3839ffafac261797d7e156df34aba&language=en-US&query=super&page=1&include_adult=true',
-    headers: {}
-};
 
-axios.request(config)
-    .then((response) => {
-        console.log(JSON.stringify(response.data));
-    })
-    .catch((error) => {
-        console.log(error);
-    });
- */
