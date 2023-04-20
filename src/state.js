@@ -2,20 +2,27 @@
 import axios from 'axios'
 import { reactive } from "vue";
 export const state = reactive({
-    movieList: null,
-    movie_base_URL: 'https://api.themoviedb.org/3/search/movie?api_key=edd3839ffafac261797d7e156df34aba&language=it-US&query=super&page=1&include_adult=true',
-    popular_movies_URL: 'https://api.themoviedb.org/3/movie/popular?api_key=edd3839ffafac261797d7e156df34aba&language=it-IT&page=1',
-    query: null,
+    searchText: '',
+    error: null,
+    loading: true,
+    results: null,
+    pagination: null,
+    movieBaseUrl: 'https://api.themoviedb.org/3',
+    apiKey: 'edd3839ffafac261797d7e156df34aba',
+    resourcePath: '/search/movie',
 
     fetchMovies(URL) {
+        const url = `${this.movieBaseUrl + this.resourcePath}?api_key=${this.apiKey}&query=${this.searchText}".`
+        console.log(url);
         axios
             .get(URL)
             .then(response => {
-                this.movieList = response.data.results;
-                console.log(this.movieList);
+                console.log(response.data.results);
+                this.results = response.data.results;
+                this.loading = true
             })
             .catch(error => {
-                console.error(error)
+                console.log(error.message)
             })
     }
 

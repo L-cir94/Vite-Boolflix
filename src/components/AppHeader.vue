@@ -6,7 +6,8 @@
                     <h1>BoolFlix</h1>
                     <div class="input_search d-flex align-items-center">
                         <i class="fa-solid fa-magnifying-glass me-3"></i>
-                        <input class="w-100 ps-3 pe-3" type="text" placeholder="Cerca qui">
+                        <input class="w-100 ps-3 pe-3" type="search" placeholder="Cerca qui" v-model="state.searchText">
+                        <button @click="state.fetchMovies">Cerca</button>
                     </div>
                 </div>
             </div>
@@ -15,11 +16,12 @@
 </template>
 
 <script>
+import {state} from '../state'
 export default {
     name: "AppHeader",
     setup() {
 
-        return {}
+        return {state}
     }
 }
 </script>
