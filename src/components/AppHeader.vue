@@ -16,13 +16,17 @@
 </template>
 
 <script>
+
 import {state} from '../state'
 export default {
     name: "AppHeader",
     setup() {
 
         return {state}
-    }
+    }/* ,
+    mounted() {
+        this.state.fetchMovies(state.movieBaseUrl)
+    } */
 }
 </script>
 

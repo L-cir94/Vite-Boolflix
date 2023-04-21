@@ -12,10 +12,12 @@ export const state = reactive({
     resourcePath: 'search/movie',
 
     fetchMovies(URL) {
+        //https://api.themoviedb.org/3/search/movie?api_key=edd3839ffafac261797d7e156df34aba&query=all
+        //https://api.themoviedb.org/3/search/movie?api_key=edd3839ffafac261797d7e156df34aba&query=
         const url = `${this.movieBaseUrl + this.resourcePath}?api_key=${this.apiKey}&query=${this.searchText}`
         console.log(url);
         axios
-            .get(URL)
+            .get(url)
             .then(response => {
                 console.log(response.data.results);
                 this.results = response.data.results;
