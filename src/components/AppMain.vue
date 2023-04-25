@@ -19,7 +19,6 @@ export default {
     <main>
         <div class="container pt-2">
             <div class="row">
-
                 <MovieList></MovieList>
             </div>
         </div>

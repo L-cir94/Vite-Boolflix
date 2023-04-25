@@ -29,7 +29,7 @@ export const state = reactive({
                 console.error(error.message);
             })
     },
-    fetchTVShows() {
+    fetchTvShows() {
         const url = `${this.BaseUrl + this.resourcePathTvShows}?api_key=${this.api_key}&query=${this.searchText}}`
         axios
             .get(url)
@@ -41,7 +41,16 @@ export const state = reactive({
                 console.log(error);
                 console.error(error.message);
             });
-    }
+    },
+    fetchAllResult(){
+/*         Promise.all([this.fetchMovies() + this.fetchTvShows()])
+        .then(function([movies, Series])){
+            console.log(movies);
+            console.log(series);
+        } */
+
+    },
+    
 
 })
 

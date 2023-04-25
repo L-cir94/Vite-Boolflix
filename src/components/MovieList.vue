@@ -4,14 +4,14 @@ import { state } from "../state"
 export default {
     name: "MovieList",
     components: {
-    LangFlag,
+        LangFlag,
     },
     data() {
         return {
             state,
 
         }
-    },methods:{
+    }, methods: {
 
     },
     mounted() {
@@ -21,17 +21,19 @@ export default {
 </script>
 
 <template>
-<!--      <span>Total movies: <strong>{{ state.results.lenght }}</strong></span> -->
     <div class="col-4 g-3" v-for="movie in state.results">
         <div class="card h-100 p-4 d-flex justify-content-start">
-            <h5 class="text-center">Titolo</h5><p class="text-center">{{ movie.title }}</p>
-            <h5 class="text-center">Titolo originale</h5><p class="text-center">{{ movie.original_title }}</p>
-            <h5 class="text-center">Lingua originale</h5><p class="text-center">{{ movie.original_language }}</p><LangFlag>{{ movie.original_language }}</LangFlag>
-            <h5 class="text-center">Voto</h5><p class="text-center">{{ movie.vote_average }}</p>
+            <h5 class="text-center">Titolo</h5>
+            <p class="text-center">{{ movie.title }}</p>
+            <h5 class="text-center">Titolo originale</h5>
+            <p class="text-center">{{ movie.original_title }}</p>
+            <h5 class="text-center">Lingua originale</h5>
+            <p class="text-center"><lang-flag :iso="movie.original_language" /></p>
+            <h5 class="text-center">Voto</h5>
+            <p class="text-center">{{ movie.vote_average }}</p>
+            <span class="overview text-center">{{ movie.overview }}</span>
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
