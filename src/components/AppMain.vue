@@ -18,7 +18,7 @@ export default {
 <template>
     <main>
         <div class="container pt-2">
-            <div class="row">
+            <div class="row d-flex flex-wrap">
                 <MovieList></MovieList>
             </div>
         </div>

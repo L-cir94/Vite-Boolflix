@@ -6,11 +6,17 @@ export const state = reactive({
     error: null,
     loading: true,
     results: null,
+/*     allResults: {
+        movies: null,
+        series: null
+    }, */
     pagination: null,
     BaseUrl: 'https://api.themoviedb.org/3/',
     apiKey: 'edd3839ffafac261797d7e156df34aba',
     resourcePathMovie: 'search/movie',
     resourcePathTvShows: 'search/tv',
+    postPic: 'https://image.tmdb.org/t/p/w300',
+    
 
     fetchMovies(URL) {
         //https://api.themoviedb.org/3/search/movie?api_key=edd3839ffafac261797d7e156df34aba&query=all
@@ -41,16 +47,18 @@ export const state = reactive({
                 console.log(error);
                 console.error(error.message);
             });
-    },
-    fetchAllResult(){
-/*         Promise.all([this.fetchMovies() + this.fetchTvShows()])
-        .then(function([movies, Series])){
-            console.log(movies);
-            console.log(series);
-        } */
+    }
+/*     fetchAllResult() {
+        Promise.all([this.fetchMovies(), this.fetchTvShows()])
+            .then(([movies, series]) => {
+                this.allResults.movies = movies.results
+                this.allResults.series = series
+            })
 
-    },
-    
+
+
+    }, */
+
 
 })
 
